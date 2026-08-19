@@ -34,17 +34,24 @@ src="https://www.facebook.com/tr?id=1394351379428107&ev=PageView&noscript=1"/>
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
     background: #091120;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
+    width: 100%;
     min-height: 100vh;
-    padding: 85px 20px 50px;
+    padding: 50px 15px;
     display: flex;
     justify-content: center;
 }
@@ -54,25 +61,25 @@ body {
     max-width: 790px;
     background: #1b2335;
     border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 32px;
-    padding: 55px 48px;
+    border-radius: 30px;
+    padding: 50px 45px;
     box-shadow: 0 25px 70px rgba(0,0,0,0.35);
 }
 
 
-/* LOGO */
+/* ================= LOGO ================= */
 
 .logo {
     width: 150px;
     height: 150px;
     display: block;
-    margin: 0 auto 40px;
+    margin: 0 auto 35px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 
-/* TITLE */
+/* ================= TITLE ================= */
 
 h1 {
     margin: 0;
@@ -80,39 +87,53 @@ h1 {
     color: #ffd21a;
     font-size: 42px;
     font-weight: 900;
+    line-height: 1.15;
 }
 
 .subtitle {
     text-align: center;
-    margin-top: 28px;
-    font-size: 29px;
+    margin-top: 22px;
+    font-size: 28px;
     font-weight: 800;
+    line-height: 1.3;
 }
 
 .tagline {
     text-align: center;
-    margin: 28px 0 40px;
+    margin: 24px 0 35px;
     color: #c3c7d0;
-    font-size: 24px;
+    font-size: 23px;
+    line-height: 1.4;
 }
 
 
-/* TELEGRAM BUTTON */
+/* ================= TELEGRAM BUTTON ================= */
 
 .telegram-btn {
     width: 100%;
-    min-height: 108px;
+    min-height: 80px;
+    padding: 18px 20px;
     background: #20c85a;
     color: #000000;
-    border-radius: 20px;
+    border-radius: 18px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
     text-decoration: none;
-    font-size: 28px;
+
+    font-size: 25px;
     font-weight: 800;
-    margin-bottom: 25px;
-    transition: 0.2s;
+    line-height: 1.25;
+
+    margin: 0 0 25px;
+
+    transition: transform 0.2s ease, filter 0.2s ease;
+
+    /* Mobile tap fix */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .telegram-btn:hover {
@@ -120,64 +141,68 @@ h1 {
     filter: brightness(1.05);
 }
 
+.telegram-btn:active {
+    transform: scale(0.98);
+}
 
-/* TRUST BOX */
+
+/* ================= TRUST BOX ================= */
 
 .trust-box {
     background: #163640;
     border: 1px solid rgba(0,220,180,0.35);
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 18px;
+    padding: 18px 15px;
     text-align: center;
-    font-size: 23px;
-    line-height: 1.8;
-    margin-bottom: 32px;
+    font-size: 21px;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 
 .feature {
-    font-size: 23px;
-    margin-bottom: 22px;
+    font-size: 22px;
+    margin-bottom: 20px;
     line-height: 1.5;
 }
 
 .check {
     color: #777a80;
-    font-size: 27px;
-    margin-right: 10px;
+    font-size: 25px;
+    margin-right: 8px;
 }
 
 
-/* BOTTOM */
+/* ================= BOTTOM ================= */
 
 .warning {
     text-align: center;
     color: #ffd21a;
-    font-size: 22px;
+    font-size: 21px;
     margin-top: 28px;
 }
 
 .limited {
     text-align: center;
     color: #c7c9d0;
-    font-size: 20px;
-    margin-top: 25px;
+    font-size: 19px;
+    margin-top: 22px;
 }
 
 .risk {
     text-align: center;
     color: #90939c;
-    font-size: 18px;
-    margin-top: 25px;
+    font-size: 17px;
+    margin-top: 22px;
 }
 
 .powered {
     text-align: center;
     color: #aeb1bb;
-    font-size: 20px;
-    margin-top: 45px;
+    font-size: 19px;
+    margin-top: 40px;
 }
 
 .powered a {
@@ -187,47 +212,137 @@ h1 {
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
 
     .container {
-        padding: 85px 20px 45px;
+        width: 100%;
+        padding: 35px 10px;
     }
 
     .card {
-        padding: 55px 28px 45px;
-        border-radius: 32px;
+        width: 100%;
+        padding: 38px 18px 35px;
+        border-radius: 25px;
     }
 
     .logo {
-        width: 150px;
-        height: 150px;
+        width: 125px;
+        height: 125px;
+        margin-bottom: 28px;
     }
 
     h1 {
-        font-size: 37px;
+        font-size: 32px;
+        line-height: 1.15;
     }
 
     .subtitle {
-        font-size: 27px;
+        font-size: 21px;
+        margin-top: 18px;
     }
 
     .tagline {
-        font-size: 22px;
+        font-size: 18px;
+        margin: 20px 0 28px;
     }
 
+    /* TELEGRAM BUTTON MOBILE FIX */
     .telegram-btn {
-        min-height: 108px;
-        font-size: 25px;
+        width: 100%;
+        min-height: 68px;
+        padding: 16px 12px;
+        margin-bottom: 22px;
+
+        font-size: 20px;
+        line-height: 1.25;
+
+        border-radius: 15px;
+
+        /* Prevent button overflow */
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: break-word;
     }
 
     .trust-box {
-        font-size: 21px;
+        font-size: 18px;
+        padding: 16px 10px;
+        line-height: 1.7;
     }
 
     .feature {
+        font-size: 18px;
+        margin-bottom: 18px;
+        line-height: 1.45;
+    }
+
+    .check {
         font-size: 21px;
+        margin-right: 6px;
+    }
+
+    .warning {
+        font-size: 18px;
+    }
+
+    .limited {
+        font-size: 17px;
+    }
+
+    .risk {
+        font-size: 15px;
+    }
+
+    .powered {
+        font-size: 17px;
+        margin-top: 35px;
+    }
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 25px 8px;
+    }
+
+    .card {
+        padding: 32px 15px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .telegram-btn {
+        font-size: 18px;
+        min-height: 62px;
+        padding: 14px 10px;
+    }
+
+    .trust-box {
+        font-size: 17px;
+    }
+
+    .feature {
+        font-size: 17px;
     }
 }
 
@@ -242,14 +357,14 @@ h1 {
 <div class="card">
 
 
-<!-- LOGO -->
+<!-- ================= LOGO ================= -->
 
 <img src="logo.png"
      class="logo"
      alt="Trader Munaaf">
 
 
-<!-- TITLE -->
+<!-- ================= TITLE ================= -->
 
 <h1>
 TRADE WITH MUNAAF
@@ -264,19 +379,19 @@ Daily Intraday Trading Signals &amp; Analysis
 </div>
 
 
-<!-- TELEGRAM BUTTON -->
+<!-- ================= TELEGRAM BUTTON 1 ================= -->
 
 <a href="https://t.me/+VrmogzQOh9djYmVl"
    class="telegram-btn"
    target="_blank"
-   rel="noopener">
+   rel="noopener noreferrer">
 
 🚀 Join Free Telegram Channel
 
 </a>
 
 
-<!-- TRUST BOX -->
+<!-- ================= TRUST BOX ================= -->
 
 <div class="trust-box">
 
@@ -287,57 +402,42 @@ Daily Intraday Trading Signals &amp; Analysis
 </div>
 
 
-<!-- FEATURES -->
+<!-- ================= FEATURES ================= -->
 
 <div class="feature">
-
 <span class="check">✔</span>
-
 5–7 High Probability Trades
-
 </div>
 
-
 <div class="feature">
-
 <span class="check">✔</span>
-
 Exact Entry, SL &amp; Target
-
 </div>
 
-
 <div class="feature">
-
 <span class="check">✔</span>
-
 Beginner Friendly Guidance
-
 </div>
-
 
 <div class="feature">
-
 <span class="check">✔</span>
-
 Live Market Updates
-
 </div>
 
 
-<!-- SECOND TELEGRAM BUTTON -->
+<!-- ================= TELEGRAM BUTTON 2 ================= -->
 
 <a href="https://t.me/+VrmogzQOh9djYmVl"
    class="telegram-btn"
    target="_blank"
-   rel="noopener">
+   rel="noopener noreferrer">
 
 🚀 Join Free Telegram Channel
 
 </a>
 
 
-<!-- BOTTOM -->
+<!-- ================= BOTTOM ================= -->
 
 <div class="warning">
 ⌛ Free Access Closing Soon
@@ -352,24 +452,28 @@ Live Market Updates
 </div>
 
 
-<!-- ADS MANAGED BY YASH -->
+<!-- ================= ADS MANAGED BY YASH ================= -->
 
 <div class="powered">
+
 Ads Managed By
+
 <a href="https://t.me/+60VgI7emtM83ZGY9"
    target="_blank"
-   rel="noopener">
+   rel="noopener noreferrer">
+
 YASH
+
 </a>
-</div>
-
-
-</div>
 
 </div>
 
 
-<!-- TELEGRAM CLICK TRACKING -->
+</div>
+</div>
+
+
+<!-- ================= TELEGRAM CLICK TRACKING ================= -->
 
 <script>
 
